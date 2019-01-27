@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <Button
+        android:id="@+id/turboButton"
+        android:layout_width="129dp"
+        android:layout_height="96dp"
+        android:text="Turbo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/ConsoleLog"
+        app:layout_constraintVertical_bias="0.885" />
+
+    <Button
+        android:id="@+id/ledPicker"
+        android:layout_width="429dp"
+        android:layout_height="96dp"
+        android:text="LED Farbe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/turboButton"
+        app:layout_constraintTop_toBottomOf="@+id/ConsoleLog"
+        app:layout_constraintVertical_bias="0.885" />
+
+    <Button
+        android:id="@+id/stopCooking"
+        android:layout_width="431dp"
+        android:layout_height="96dp"
+        android:text="Stop Cooking"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toEndOf="@+id/guideline7" />
+
+    <EditText
+        android:id="@+id/ConsoleLog"
+        android:layout_width="946dp"
+        android:layout_height="138dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/startCooking"
+        android:layout_width="134dp"
+        android:layout_height="96dp"
+        android:text="StartCooking"
+        app:layout_constraintBottom_toTopOf="@+id/guideline9"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="510dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintGuide_begin="514dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="329dp" />
+
+
+    <it.beppi.knoblibrary.Knob
+        android:id="@+id/knob"
+        android:layout_width="354dp"
+        android:layout_height="295dp"
+        app:kAnimationBounciness="20"
+        app:kAnimationSpeed="10"
+        app:kBalloonValuesAnimation="fade"
+        app:kBalloonValuesRelativePosition="0.25"
+        app:kBalloonValuesTextSize="4sp"
+        app:kBorderWidth="0dp"
+        app:kCircularIndicatorColor="@color/green_a200"
+        app:kCircularIndicatorRelativePosition="0.55"
+        app:kCircularIndicatorRelativeRadius="0.03"
+        app:kDefaultState="10"
+        app:kFreeRotation="false"
+        app:kIndicatorWidth="0dp"
+
+        app:kKnobDrawableRotates="false"
+        app:kMaxAngle="120"
+        app:kMinAngle="-120"
+        app:kNumberOfStates="10"
+        app:kSelectedStateMarkerColor="@color/green_a200"
+        app:kSelectedStateMarkerContinuous="true"
+        app:kShowBalloonValues="true"
+        app:kStateMarkersAccentColor="@color/grey_800"
+        app:kStateMarkersAccentPeriodicity="5"
+        app:kStateMarkersAccentRelativeLength="0.09"
+        app:kStateMarkersAccentWidth="2dp"
+        app:kStateMarkersColor="@color/grey_800"
+        app:kStateMarkersRelativeLength="0.08"
+        app:kStateMarkersWidth="1dp"
+        app:kSwipe="vertical"
+        app:kSwipeSensitivityPixels="15"
+        app:layout_constraintEnd_toStartOf="@+id/startCooking"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ConsoleLog" />
+
+
+</android.support.constraint.ConstraintLayout>
